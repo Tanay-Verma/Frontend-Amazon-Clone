@@ -1,0 +1,28 @@
+/* *{
+  box-sizing: border-box;
+}
+
+body, #root{
+  margin: 0;
+  padding: 0;
+}
+
+.navbar{
+  background-color: black;
+  height: 90px;
+}
+
+.navbar--list{
+  list-style: none;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.navbar--ele{
+  margin:30px;
+  color: white;
+}  */
+
+
+

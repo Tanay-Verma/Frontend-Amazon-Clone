@@ -1,0 +1,84 @@
+*{
+    box-sizing: border-box;
+}
+
+.login--wrapper{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginPage{
+    background-color: white;
+    width: 400px;
+    padding: 30px;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.loginPage--title{
+    align-self: center;
+    font-size: 35px;
+    margin-bottom: 50px;
+}
+
+.box--lable{
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.box--input{
+    border: none;
+    border-radius: 10px;
+    height: 30px;
+    padding-left: 10px;
+    box-shadow: 0 2px 3px grey;
+    margin-bottom:20px;
+}
+
+.loginPage--pass--input{
+    margin-bottom: 10px;
+}
+
+.loginPage--forgot--pass{
+    align-self:flex-end;
+    font-size: 10px;
+    color:grey;
+    margin-bottom: 30px;
+}
+
+.loginPage--login{
+    border:none;
+    border-radius: 20px;
+    color: white;
+    background-image:linear-gradient(to right,#68CFDC,#E241EF);
+    height: 30px;
+    margin-bottom: 50px;
+}
+
+.loginPage--signup{
+    font-size: 10px;
+    color: grey;
+    align-self: center;
+    margin-bottom: 10px;
+}
+
+.socials--wrapper{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.socials{
+    width: 30px;
+    margin:0 3px;
+}
+
+.loginPage--signup--btn{
+    border: none;
+    border-radius: 20px;
+    height: 30px;
+}

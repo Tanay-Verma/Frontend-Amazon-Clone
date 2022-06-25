@@ -1,0 +1,61 @@
+.cartCard{
+    height: 60px;
+    width: 80%;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 60px repeat(4,25%);
+    background-color: white;
+}
+
+.cartCard--item--img{
+    /* background-color: black; */
+    height: 60px;
+    width: 100%;
+}
+
+
+
+.cartCard--item--name{
+    /* background-color: pink; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cartCard--item--qty{
+    /* background-color: orange; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.add--qty{
+    height: 40px;
+    width: 40px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.minus--qty{
+    height: 40px;
+    width: 40px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.cartCard--item--total{
+    /* background-color: bisque; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cartCard--item--remove--btn{
+    height: 60px;
+}
+
+

@@ -1,0 +1,13 @@
+.subheader{
+    background-color:#232F3E;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    gap:30px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.subheader--text{
+    color:white;
+}
