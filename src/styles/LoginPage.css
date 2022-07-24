@@ -4,12 +4,17 @@
 
 .login--wrapper{
     height: 90vh;
+    /* display: fixed; */
     display: flex;
     justify-content: center;
     align-items: center;
+    /* transform: translate(-50%,-50%); */
+    /* top:50%;
+    left:50%; */
 }
 
 .loginPage{
+    /* transform: translate(-50%,-50%); */
     background-color: white;
     width: 400px;
     padding: 30px;
@@ -57,6 +62,7 @@
     background-image:linear-gradient(to right,#68CFDC,#E241EF);
     height: 30px;
     margin-bottom: 50px;
+    cursor: pointer;
 }
 
 .loginPage--signup{
@@ -81,4 +87,5 @@
     border: none;
     border-radius: 20px;
     height: 30px;
+    cursor: pointer;
 }

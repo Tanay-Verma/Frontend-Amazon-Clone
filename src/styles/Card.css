@@ -7,16 +7,18 @@
     background-color: white;
     border: none;
     box-shadow: 0 5px 5px grey;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 45% 55%;
+    grid-template-areas: 
+        'img'
+        'details';
 }
 
 .card--img--box{
     background-color:black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 45%;
+    max-width: 100%;
+    /* height: 45%; */
+    grid-area: img;
 }
 
 .card--img{
@@ -26,38 +28,54 @@
 
 .card--details{
     /* background-color: red; */
+    grid-area: details;
     height: 55%;
     padding:10px 30px;
+    display: grid;
+    grid-template-rows: repeat(4 1fr);
+    grid-template-areas: 
+        'header'
+        'inventory'
+        'price'
+        'button';
 }
 
 .card--title{
     /* background-color: aqua; */
     font-weight: 600;
-    font-size: 20px;
+    font-size: 100%;
     margin-bottom: 20px;
-    text-align: center;
+    /* text-align: center; */
+    grid-area: header;
+    justify-self:center;
+    white-space: nowrap;
+    
 }
 
 .card--inventory{
-    font-size: 12px;
+    font-size: 100%;
     color: #0071A3;
     margin-bottom: 20px;
+    grid-area: inventory;
 }
 
 .card--cost{
     font-size: 24px;
     color:#B12704;
     margin-bottom: 30px;
+    grid-area: price;
 }
 
 .card--button--box{
-    display: flex;
-    justify-content: center;
     height: 20%;
+    grid-area: button;
+    justify-content: stretch;
 }
 
 .card--button{
     border: none;
+    width: 100%;
+    height: 40px;
     border-radius: 4px;
     font-size: 20px;
     background-color: #F7CA00;
