@@ -24,7 +24,6 @@ function App() {
   let [email,setEmail] = useState('')
   let [password,setPassword] = useState('')
   let [cnfPassword,setCnfPassword] = useState('')
-  let [disabled,setDisabled] = useState(false)
   let [input, setInput] = useState("")
   let [cart, setCart] = useState([])
 
