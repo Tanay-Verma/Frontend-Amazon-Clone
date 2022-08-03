@@ -18,9 +18,9 @@ export default function LoginPage({setEmail,setPassword,handleLoginClick}) {
                 <button className="loginPage--login" onClick={handleLoginClick}>LOGIN</button>
                 <p className="loginPage--signup">Or Sign Up Using</p>
                 <div className="socials--wrapper">
-                    <img src="/images/google.png" className="socials" alt="facebook" />
-                    <img src="/images/facebook.png" className="socials" alt="twitter" />
-                    <img src="/images/twitter.png" className="socials" alt="google" />
+                    <img src="/Frontend-Amazon-Clone/images/google.png" className="socials" alt="facebook" />
+                    <img src="/Frontend-Amazon-Clone/images/facebook.png" className="socials" alt="twitter" />
+                    <img src="/Frontend-Amazon-Clone/images/twitter.png" className="socials" alt="google" />
                 </div>
                 <p className="loginPage--signup">Or Sign Up Using</p>
                 <button className="loginPage--signup--btn"><Link to="/signup" style={{textDecoration:"none"}}>SIGN UP</Link></button>

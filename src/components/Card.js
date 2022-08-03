@@ -4,7 +4,7 @@ export default function Card({info, addToCart}) {
     return (
         <div className="card">
             <div className="card--img--box">
-                <img src={`/images/${info.img}`} className="card--img" alt='img'/>
+                <img src={`/Frontend-Amazon-Clone/images/${info.img}`} className="card--img" alt='img'/>
             </div>
             <div className="card--details">
 

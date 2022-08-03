@@ -1,6 +1,6 @@
 import Navbar from "./components/Navbar"
 import Subheader from "./components/Subheader"
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { HashRouter, Routes, Route } from "react-router-dom"
 import Shirts from "./components/routes/Shirts"
 import Pants from "./components/routes/Pants"
 import Home from "./components/routes/Home"
@@ -52,7 +52,7 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <Navbar setInput={setInput} cart={cart} />
         <Subheader />
         <Routes>
@@ -63,7 +63,7 @@ function App() {
           <Route path="/pants" element={<Pants addToCart={addToCart} />}></Route>
           <Route path="/cart" element={<Cart cart={cart} setCart={setCart} addToCart={addToCart} />}></Route>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   )
 }

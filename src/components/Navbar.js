@@ -11,8 +11,8 @@ export default function Navbar({ setInput, cart }) {
     }
     return (
         <nav className="navbar">
-            <Link to="/" style={{textDecoration:"none"}}>
-                <img src="/images/amazon.png" alt="amazon" className="navbar--logo" />
+            <Link to="/" style={{ textDecoration: "none" }}>
+                <img src="/Frontend-Amazon-Clone/images/amazon.png" alt="amazon" className="navbar--logo" />
             </Link>
             <FontAwesomeIcon icon={faLocationDot} className="navbar--icon location-dot" />
             <div className="navbar--greeting">
@@ -24,7 +24,7 @@ export default function Navbar({ setInput, cart }) {
             <button className="navbar--search--btn">
                 <FontAwesomeIcon icon={faMagnifyingGlass} className="navbar--icon" />
             </button>
-            <img src="/images/flag.png" alt="flag" className="flag" />
+            <img src="/Frontend-Amazon-Clone/images/flag.png" alt="flag" className="flag" />
             <ul className="navbar--list">
                 <li className="navbar--ele">
                     <Link to="/login" style={{ textDecoration: "none" }}>
@@ -42,7 +42,7 @@ export default function Navbar({ setInput, cart }) {
                 </li>
                 <li className="navbar--ele">
                     <Link to="/cart" style={{ textDecoration: "none" }}>
-                        <img src="/images/cart.png" className="cart" />
+                        <img src="/Frontend-Amazon-Clone/images/cart.png" className="cart" />
                     </Link>
                 </li>
                 <li className="navbar--ele">
