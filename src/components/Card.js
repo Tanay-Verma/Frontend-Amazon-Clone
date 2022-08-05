@@ -3,11 +3,8 @@ import "../styles/Card.css"
 export default function Card({info, addToCart}) {
     return (
         <div className="card">
-            <div className="card--img--box">
-                <img src={`/Frontend-Amazon-Clone/images/${info.img}`} className="card--img" alt='img'/>
-            </div>
+            <img src={`/Frontend-Amazon-Clone/images/${info.img}`} className="card--img" alt='img'/>
             <div className="card--details">
-
                 <div className="card--title">{info.title}</div>
                 <p className="card--inventory">Stock: {info.inventory}</p>
                 <p className="card--cost">Price: ₹{info.cost}</p>
