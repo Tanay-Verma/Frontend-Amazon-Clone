@@ -58,11 +58,11 @@ img {
         background: rgb(0, 0, 0, 0.8);
         backdrop-filter: blur(2rem);
         transform: translateX(100%);
-        transition: transform 350ms ease-in-out;
     }
 
     .navbar--list[data-visible="true"] {
         transform: translateX(0);
+        transition: transform 250ms ease-in-out;
     }
 
     .navbar--mobile--toggle {
