@@ -8,7 +8,7 @@
 body {
     /* background-color: #0D1117; */
     background-image: linear-gradient(to right, rgba(0, 255, 255, 0.329), rgba(255, 192, 203, 0.801));
-
+    overflow-x: hidden;
 }
 
 img {
@@ -20,12 +20,82 @@ img {
     font-weight: bold;
 }
 
-.navbar {
+.primary--header {
+    display: flex;
     background-color: #131921;
-    padding: 1em;
-    /* height: 80px; */
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    padding: 1rem;
+}
+
+.navbar--mobile--toggle {
+    display: none;
+}
+
+.navbar--list {
+    list-style: none;
     display: flex;
     align-items: center;
+    gap: 2rem;
+}
+
+.navbar--ele {
+    color: white;
+    display: flex;
+}
+
+@media(max-width:96rem) {
+    .navbar--list {
+        position: fixed;
+        inset: 0 0 0 30%;
+        z-index: 1000;
+        /* background: steelblue; */
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2em;
+        padding: min(10vw, 1em);
+        background: rgb(0, 0, 0, 0.8);
+        backdrop-filter: blur(2rem);
+        transform: translateX(100%);
+        transition: transform 350ms ease-in-out;
+    }
+
+    .navbar--list[data-visible="true"] {
+        transform: translateX(0);
+    }
+
+    .navbar--mobile--toggle {
+        display: block;
+        position: absolute;
+        z-index: 9999;
+        background:url(../public/images/menu-burger.png);
+        background-size:cover;
+        background-repeat: no-repeat;
+        width: 2.5rem;
+        aspect-ratio: 1;
+        top: 1rem;
+        right: 1.5rem;
+        border: none;
+        cursor: pointer;
+    }
+
+    .navbar--mobile--toggle[data-expanded="true"]{
+        position:fixed;
+        background:url(../public/images/x-button.png);
+        background-size:cover;
+        background-repeat: no-repeat;
+        width: 2rem;
+    }
+
+    .navbar--mobile--toggle>img {
+        width: 100%;
+        aspect-ratio: 1;
+    }
+}
+
+.navbar--logo {
+    width: 7rem;
 }
 
 .line1 {
@@ -38,23 +108,18 @@ img {
     font-size: 0.9rem;
 }
 
-.navbar--logo {
-    /* height: 50px; */
-    width: 7em;
-}
-
 .navbar--icon {
     color: white;
-}
-
-.location-dot {
-    margin-left: 1em;
+    align-self: center;
+    margin-right: 0.4em;
 }
 
 .navbar--greeting {
-    width: 10%;
     color: white;
-    margin-left: 0.4em;
+}
+
+.navbar--searchbar {
+    display: flex;
 }
 
 .navbar--all-btn {
@@ -62,7 +127,6 @@ img {
     height: 3em;
     border: none;
     border-radius: 0.3em 0 0 0.3em;
-    margin-left: 1.25em;
 }
 
 .navbar--search {
@@ -84,20 +148,6 @@ img {
 
 .flag {
     width: 2em;
-    margin-left: 1.5em;
-}
-
-.navbar--list {
-    margin-left: 1.5em;
-    width: 20vw;
-    list-style: none;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.navbar--ele {
-    color: white;
 }
 
 .navbar--login {
@@ -110,6 +160,7 @@ img {
     height: 2.5em;
     width: 2.5em;
     cursor: pointer;
+    margin: 0 0 0 0;
 }
 
 .cart-counter {
@@ -131,6 +182,6 @@ img {
 .home {
     padding: 0 1em;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem,1fr));
-    gap:1em;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 2fr));
+    gap: 1em;
 }
