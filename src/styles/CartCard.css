@@ -1,61 +1,95 @@
-.cartCard{
-    height: 60px;
-    width: 80%;
-    margin-top: 50px;
+.cartCard {
+    /* height: 60px; */
+    width: 80vw;
+    margin-top: 3em;
     display: grid;
-    grid-template-columns: 60px repeat(4,25%);
+    grid-template-columns: 3.75em repeat(4, 25%);
+    /* grid-template-columns: repeat(auto-fit, minmax(10em, 20%)); */
     background-color: white;
 }
 
-.cartCard--item--img{
-    /* background-color: black; */
-    height: 60px;
-    width: 100%;
+@media(max-width:37.5rem) {
+    .cartCard {
+        grid-template-columns: 3.75rem repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .remove--btn--wrapper {
+        grid-column: span 4;
+    }
 }
 
+@media(max-width:25.625rem) {
+    .cartCard{
+        /* grid-template-columns: repeat(auto-fit, minmax(15em, 20%)); */
+        grid-template-rows: repeat(6,16.66%);
+        grid-template-columns: none;
+    }
 
+    .remove--btn--wrapper{
+        grid-column:span none;
+    }
 
-.cartCard--item--name{
+    .cartCard--item--img{
+        grid-row: span 2;
+        width: 100%;
+        height: 100%;
+    }
+    
+}
+
+.cartCard--item--img {
+    /* background-color: black; */
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+.cartCard--item--name {
     /* background-color: pink; */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.cartCard--item--qty{
+.cartCard--item--qty {
     /* background-color: orange; */
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.add--qty{
-    height: 40px;
-    width: 40px;
+.add--qty {
+    width: 2.5rem;
+    aspect-ratio: 1;
     border: none;
     border-radius: 50%;
     cursor: pointer;
-    font-size: 30px;
+    font-size: 2rem;
 }
 
-.minus--qty{
-    height: 40px;
-    width: 40px;
+.minus--qty {
+    width: 2.5rem;
+    aspect-ratio: 1;
     border: none;
     border-radius: 50%;
     cursor: pointer;
-    font-size: 30px;
+    font-size: 2rem;
 }
 
-.cartCard--item--total{
+.cartCard--item--total {
     /* background-color: bisque; */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.cartCard--item--remove--btn{
-    height: 60px;
+.remove--btn--wrapper {
+    width: 100%;
+    background-color: hotpink;
 }
 
-
+.cartCard--item--remove--btn {
+    width: 100%;
+    border: none;
+    height: 100%;
+}

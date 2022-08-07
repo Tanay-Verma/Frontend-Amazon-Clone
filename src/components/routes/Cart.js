@@ -34,8 +34,8 @@ export default function Cart({cart, setCart, addToCart}) {
     <>
       <div className="cart--info--bar">
         <ul className="cart--ul">
-          <li className="cart--ul--ele total--amt">Total Amount <p className="amt--val">{totalAmt}</p></li>
-          <li className="cart--ul--ele"><button className="cart--empty--btn bold" onClick={handelDelete}>Empty Cart</button></li>
+          <li className="cart--ul--ele total--amt">Total Amount <p className="amt--val bold">{totalAmt}</p></li>
+          <li className="cart--ul--ele empty--btn"><button className="cart--empty--btn bold" onClick={handelDelete}>Empty Cart</button></li>
         </ul>
       </div>
       <div className="cart--product--cards">

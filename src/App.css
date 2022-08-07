@@ -6,7 +6,6 @@
 }
 
 body {
-    /* background-color: #0D1117; */
     background-image: linear-gradient(to right, rgba(0, 255, 255, 0.329), rgba(255, 192, 203, 0.801));
     overflow-x: hidden;
 }
@@ -45,54 +44,7 @@ img {
     display: flex;
 }
 
-@media(max-width:96rem) {
-    .navbar--list {
-        position: fixed;
-        inset: 0 0 0 30%;
-        z-index: 1000;
-        /* background: steelblue; */
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 2em;
-        padding: min(10vw, 1em);
-        background: rgb(0, 0, 0, 0.8);
-        backdrop-filter: blur(2rem);
-        transform: translateX(100%);
-    }
 
-    .navbar--list[data-visible="true"] {
-        transform: translateX(0);
-        transition: transform 250ms ease-in-out;
-    }
-
-    .navbar--mobile--toggle {
-        display: block;
-        position: absolute;
-        z-index: 9999;
-        background:url(../public/images/menu-burger.png);
-        background-size:cover;
-        background-repeat: no-repeat;
-        width: 2.5rem;
-        aspect-ratio: 1;
-        top: 1rem;
-        right: 1.5rem;
-        border: none;
-        cursor: pointer;
-    }
-
-    .navbar--mobile--toggle[data-expanded="true"]{
-        position:fixed;
-        background:url(../public/images/x-button.png);
-        background-size:cover;
-        background-repeat: no-repeat;
-        width: 2rem;
-    }
-
-    .navbar--mobile--toggle>img {
-        width: 100%;
-        aspect-ratio: 1;
-    }
-}
 
 .navbar--logo {
     width: 7rem;
@@ -182,6 +134,59 @@ img {
 .home {
     padding: 0 1em;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 2fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(20em, 90vw), 1fr));
     gap: 1em;
+}
+
+@media(max-width:96rem) {
+    .navbar--list {
+        position: fixed;
+        inset: 0 0 0 30%;
+        z-index: 1000;
+        /* background: steelblue; */
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2em;
+        padding: min(10vw, 1em);
+        background: rgb(0, 0, 0, 0.8);
+        backdrop-filter: blur(2rem);
+        transform: translateX(100%);
+    }
+
+    .navbar--list[data-visible="true"] {
+        transform: translateX(0);
+        transition: transform 250ms ease-in-out;
+    }
+
+    .navbar--mobile--toggle {
+        display: block;
+        position: absolute;
+        z-index: 9999;
+        background: url(../public/images/menu-burger.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 2.5rem;
+        aspect-ratio: 1;
+        top: 1rem;
+        right: 1.5rem;
+        border: none;
+        cursor: pointer;
+    }
+
+    .navbar--mobile--toggle[data-expanded="true"] {
+        position: fixed;
+        background: url(../public/images/x-button.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 0.7em;
+    }
+
+    .navbar--mobile--toggle>img {
+        width: 100%;
+        aspect-ratio: 1;
+    }
+
+    .navbar--search {
+        width: max(40vw);
+    }
 }
