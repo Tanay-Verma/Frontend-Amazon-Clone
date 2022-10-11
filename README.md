@@ -4,6 +4,7 @@
 “Imitation is the sincerest form of flattery that mediocrity can pay to greatness.” - Oscar Wilde
 
 **Project Type: Frontend**
+
 **Link: https://tanay-verma.github.io/Frontend-Amazon-Clone/**
 
 This is a very simple clone of the popular E-Commerce website Amazon.com . I applied my knowledge of 
